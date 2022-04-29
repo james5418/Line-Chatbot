@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -18,7 +17,7 @@ func main() {
 	}
 
 	bot, err := linebot.New(os.Getenv("CHANNEL_SECRET"), os.Getenv("CHANNEL_TOKEN"))
-	log.Println("Bot:", bot, " err:", err)
+	// log.Println("Bot:", bot, " err:", err)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -35,17 +34,19 @@ func main() {
 			}
 			return
 		}
+
 		for _, event := range events {
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
-					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.Text)).Do(); err != nil {
+					result := CmdHandler(message.Text)
+					if _, err = bot.ReplyMessage(event.ReplyToken, result).Do(); err != nil {
 						log.Print(err)
 					}
-				case *linebot.StickerMessage:
-					replyMessage := fmt.Sprintf(
-						"sticker id is %s, stickerResourceType is %s", message.StickerID, message.StickerResourceType)
-					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(replyMessage)).Do(); err != nil {
+
+				default:
+					const usage = "Try 'help' for more information"
+					if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(usage)).Do(); err != nil {
 						log.Print(err)
 					}
 				}
