@@ -6,7 +6,7 @@
 
 ## Introduction
 - This project is developed by ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?logo=go&logoColor=white) and ![Gin](https://img.shields.io/badge/-Gin-00ADD8?link=https://github.com/gin-gonic/gin) framework
-- Sending reply messages on the basis of [Line Messaging API](https://developers.line.biz/en/docs/messaging-api/) and [LINE Messaging API SDK for Go](https://github.com/line/line-bot-sdk-go)
+- Sending reply messages based on [Line Messaging API](https://developers.line.biz/en/docs/messaging-api/) and [LINE Messaging API SDK for Go](https://github.com/line/line-bot-sdk-go)
 - All the chatbot responses are Flex Messages written in JSON format
 
 ## Usage
