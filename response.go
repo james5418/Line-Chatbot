@@ -143,7 +143,7 @@ var AboutInfo = []byte(`{
 				},
 				{
 				  "type": "text",
-				  "text": "Click on the links below or interact with the bot!",
+				  "text": "Click the links below or interact with the bot!",
 				  "size": "sm",
 				  "color": "#ffffffde",
 				  "flex": 0,
@@ -228,7 +228,7 @@ var UsageInfo = []byte(`{
 			},
 			{
 			  "type": "text",
-			  "text": "Use them to play with the bot !",
+			  "text": "Click them to play with the bot !",
 			  "size": "sm",
 			  "color": "#ffffffde",
 			  "wrap": true
