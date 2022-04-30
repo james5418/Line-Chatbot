@@ -1,2 +1,2 @@
 # Self-Promotion Chatbot
-2022 Line Tech Fresh
+A self-promotion Line chatbot for **2022 Line Tech Fresh**
