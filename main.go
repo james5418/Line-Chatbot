@@ -17,7 +17,6 @@ func main() {
 	}
 
 	bot, err := linebot.New(os.Getenv("CHANNEL_SECRET"), os.Getenv("CHANNEL_TOKEN"))
-	// log.Println("Bot:", bot, " err:", err)
 	if err != nil {
 		log.Fatal(err)
 	}

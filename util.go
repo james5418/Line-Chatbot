@@ -32,5 +32,5 @@ func CmdHandler(req string) (res *linebot.FlexMessage) {
 		log.Print(err)
 	}
 
-	return linebot.NewFlexMessage("alt", container)
+	return linebot.NewFlexMessage(req, container)
 }
