@@ -1,5 +1,5 @@
 # Self-Promotion Chatbot
-### A self-promotion Line chatbot for **2022 Line Tech Fresh**
+### A self-promotion Line chatbot
 
 > Line@ ID : @086hkypm
 <img src="https://qr-official.line.me/sid/L/086hkypm.png" alt="drawing" width="250"/>
